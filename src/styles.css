@@ -1,0 +1,259 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "Inter", sans-serif;
+  background: #1a120f;
+  color: #fff7ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.17), transparent 23%),
+    radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 24%),
+    linear-gradient(180deg, #1a120f 0%, #201612 54%, #241914 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.shell {
+  width: min(1400px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 40px 0 72px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.eyebrow,
+.panelLabel,
+.cardLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #fdba74;
+  font-size: 0.76rem;
+  margin: 0 0 10px;
+}
+
+.hero h1 {
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 0.98;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.lede {
+  color: #d6c0b4;
+  font-size: 1.08rem;
+  line-height: 1.76;
+  max-width: 70ch;
+  margin-top: 18px;
+}
+
+.heroPanel,
+.metricCard,
+.panel,
+.spotlightCard,
+.experimentCard {
+  background: rgba(31, 22, 18, 0.92);
+  border: 1px solid #4a342b;
+  border-radius: 24px;
+  box-shadow: 0 18px 42px rgba(12, 8, 7, 0.34);
+}
+
+.heroPanel {
+  padding: 24px;
+}
+
+.heroLabel,
+.tag,
+.spotlightCard span {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.heroLabel {
+  background: rgba(249, 115, 22, 0.14);
+  color: #fdba74;
+}
+
+.heroPanel strong {
+  display: block;
+  margin-top: 18px;
+  font-size: 1.45rem;
+}
+
+.heroPanel p {
+  color: #d5c1b4;
+  line-height: 1.74;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.metricCard {
+  padding: 18px 20px;
+}
+
+.metricCard span {
+  display: block;
+  color: #cbb3a8;
+  margin-bottom: 10px;
+}
+
+.metricCard strong {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.metricCard p {
+  margin: 0;
+  color: #fff7ed;
+}
+
+.tone-win strong { color: #34d399; }
+.tone-watch strong { color: #f59e0b; }
+.tone-risk strong { color: #ef4444; }
+
+.panelGrid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.95fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.panel {
+  padding: 22px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.tag {
+  color: #fde68a;
+  background: rgba(245, 158, 11, 0.14);
+}
+
+.spotlightStack,
+.cardGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.spotlightCard,
+.experimentCard {
+  padding: 18px;
+}
+
+.spotlightCard span {
+  color: #a7f3d0;
+  background: rgba(52, 211, 153, 0.12);
+}
+
+.spotlightCard strong,
+.experimentCard h3 {
+  display: block;
+  margin: 12px 0 8px;
+  font-size: 1.02rem;
+}
+
+.spotlightCard p,
+.experimentCard p {
+  margin: 0;
+  color: #d6c0b4;
+  line-height: 1.72;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  color: #cbb3a8;
+  font-size: 0.88rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid #49352c;
+}
+
+th {
+  color: #cdb7ab;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+}
+
+td {
+  color: #fff7ed;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .panelGrid,
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .shell {
+    width: min(100vw - 24px, 1400px);
+    padding-top: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2.45rem;
+  }
+
+  .panel,
+  .heroPanel,
+  .metricCard,
+  .spotlightCard,
+  .experimentCard {
+    border-radius: 18px;
+  }
+}
